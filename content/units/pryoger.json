@@ -1,0 +1,108 @@
+	name:Pryoger
+	type:mech
+	boostMultiplier: 1
+	engineOffset: 14 
+	engineSize: 6
+	canBoost: true
+	hitSize:26
+	canDrown:false
+	armor: 18
+	speed:0.5
+	rotateSpeed: 2.35
+	baseRotateSpeed:2.3
+	health: 3300
+	mechStepParticles:true
+	mechFrontSway:0.98
+	mechSideSway:0.4
+	immunities:[burning,blasted]
+	abilities: [
+		{
+			type: MoveLightningAbility
+			damage:35.0	
+			chance:1
+			length:12
+			color:6789ff
+			
+			
+			
+		}
+	]
+	weapons: [
+		{
+			name: pryoger1
+			mirror:true
+			x: -18
+			reload: 6.66
+			shootX: -0.75
+			shootY: 15
+			recoil: 0.6
+			inaccuracy: 10
+			shootSound:missile
+			top: true
+			shootWarmupSpeed:0.03
+			minWarmup:0.9
+			shake: 0.36
+			velocityRnd:0.1
+			bullet:{
+				type: FireBulletType
+				colorFrom:ffdd55ff	
+				colorMid:db401cff	
+				colorTo:7f7f7fff
+				range:30
+				length:30
+				frontColor: f8ad42
+				backColor: f68021
+				speed: 10
+				splashDamageRadius: 26
+				splashDamage: 83
+				incendAmount: 1
+				incendSpread: 16
+				incendChance: 0.2
+				absorbable: false
+				hitSound:explosion
+				shootEffect: shootPyraFlame
+				hitEffect: flakExplosionBig
+				despawnEffect: none
+				statusDuration: 360
+				status: burning
+			
+
+
+			type: LightningBulletType
+				lightningColor:5678ff	
+				lightningLength:30
+				range:100
+				drag:0.017
+				lifetime: 33
+				hitSound:explosion
+				shootEffect: shootPyraFlame
+				statusDuration: 360
+				status: burning
+}
+
+			
+			parts: [
+				{
+					type: RegionPart
+					mirror: false
+					y:-8
+					suffix: -a
+					under: true
+					moveY: 10
+					progress: warmup
+				}
+				{
+					type: RegionPart
+					mirror: false
+					suffix: -b
+					under: true
+					moveY: -10
+					progress: warmup
+				}
+			]
+		
+		
+			
+		}
+	]
+
